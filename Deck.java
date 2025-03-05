@@ -28,7 +28,15 @@ public class Deck {
         public void shuffleDeck() {
         Collections.shuffle(deck);
     }
+    public void printCard(int index) {
+        if (index >= 0 && index < deck.size()) {
+            deck.get(index).printCard();
+        } else {
+            System.out.println("Invalid card index!");
+        }
+    }
 
+    
 
 }
 
