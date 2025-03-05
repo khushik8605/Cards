@@ -1,6 +1,3 @@
-//Khushi Kashyap
-//23070126060
-//AIML A3
 
 // Main.java
 import java.util.*;
@@ -8,6 +5,7 @@ import java.util.*;
 public class Main {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
+        Deck deck = new Deck();
         int choice;
 
         do {
@@ -22,7 +20,20 @@ public class Main {
             System.out.println("8. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine(); // Consume newline
+
+            switch (choice) {
+                case 1:
+                    deck.displayDeck();
+                    break;
+                case 2:
+                    deck.shuffleDeck();
+                    System.out.println("Deck shuffled!");
+                    break;
+                case 8:
+                    System.out.println("Exiting program...");
+                    break;
+            }
         } while (choice != 8);
 
         scanner.close();
