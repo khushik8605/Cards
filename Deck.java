@@ -36,7 +36,15 @@ public class Deck {
         }
     }
 
-    
+        public void sameCard(String suit) {
+        System.out.println("Cards from suit: " + suit);
+        for (Card card : deck) {
+            if (card.getSuit().equalsIgnoreCase(suit)) {
+                card.printCard();
+            }
+        }
+    }
+
 
 }
 
