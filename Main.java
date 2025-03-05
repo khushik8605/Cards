@@ -43,6 +43,16 @@ public class Main {
                     String rank = scanner.nextLine();
                     deck.findCard(suit, rank);
                     break;
+                case 5:
+                    System.out.print("Enter suit: ");
+                    String suitName = scanner.nextLine();
+                    deck.sameCard(suitName);
+                    break;
+                case 6:
+                    System.out.print("Enter rank: ");
+                    String rankName = scanner.nextLine();
+                    deck.compareCard(rankName);
+                    break;
                 case 8:
                     System.out.println("Exiting program...");
                     break;
