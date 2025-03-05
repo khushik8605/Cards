@@ -1,4 +1,5 @@
 
+
 // Main.java
 import java.util.*;
 
@@ -29,6 +30,18 @@ public class Main {
                 case 2:
                     deck.shuffleDeck();
                     System.out.println("Deck shuffled!");
+                    break;
+                case 3:
+                    System.out.print("Enter card index (0-51): ");
+                    int index = scanner.nextInt();
+                    deck.printCard(index);
+                    break;
+                case 4:
+                    System.out.print("Enter suit: ");
+                    String suit = scanner.nextLine();
+                    System.out.print("Enter rank: ");
+                    String rank = scanner.nextLine();
+                    deck.findCard(suit, rank);
                     break;
                 case 8:
                     System.out.println("Exiting program...");
