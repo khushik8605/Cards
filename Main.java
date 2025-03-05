@@ -1,3 +1,6 @@
+//Khushi Kashyap
+//23070126060
+//AIML A3
 
 // Main.java
 import java.util.*;
@@ -8,6 +11,7 @@ public class Main {
         Deck deck = new Deck();
         int choice;
 
+        
         do {
             System.out.println("\n********** MENU **********");
             System.out.println("1. Print Deck");
@@ -21,6 +25,7 @@ public class Main {
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
+
 
             switch (choice) {
                 case 1:
@@ -58,6 +63,8 @@ public class Main {
                 case 8:
                     System.out.println("Exiting program...");
                     break;
+                default:
+                    System.out.println("Invalid choice! Try again.");
             }
         } while (choice != 8);
 
