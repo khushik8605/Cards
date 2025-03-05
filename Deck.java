@@ -18,5 +18,12 @@ public class Deck {
             }
         }
     }
+        public void displayDeck() {
+        for (Card card : deck) {
+            card.printCard();
+        }
+        System.out.println("Total Cards: " + deck.size());
+    }
+
 }
 
