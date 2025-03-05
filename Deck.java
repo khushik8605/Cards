@@ -1,9 +1,11 @@
+// Deck.java
 import java.util.*;
 
 public class Deck {
     private ArrayList<Card> deck;
     private static final String[] SUITS = {"Hearts", "Diamonds", "Clubs", "Spades"};
     private static final String[] RANKS = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
+
 
     public Deck() {
         deck = new ArrayList<>();
@@ -18,16 +20,19 @@ public class Deck {
             }
         }
     }
-        public void displayDeck() {
+    
+
+    public void displayDeck() {
         for (Card card : deck) {
             card.printCard();
         }
         System.out.println("Total Cards: " + deck.size());
     }
 
-        public void shuffleDeck() {
+    public void shuffleDeck() {
         Collections.shuffle(deck);
     }
+
     public void printCard(int index) {
         if (index >= 0 && index < deck.size()) {
             deck.get(index).printCard();
@@ -36,14 +41,17 @@ public class Deck {
         }
     }
 
-        public void sameCard(String suit) {
+
+    public void sameCard(String suit) {
         System.out.println("Cards from suit: " + suit);
         for (Card card : deck) {
             if (card.getSuit().equalsIgnoreCase(suit)) {
                 card.printCard();
             }
         }
-                public void compareCard(String rank) {
+    }
+
+    public void compareCard(String rank) {
         System.out.println("Cards with rank: " + rank);
         for (Card card : deck) {
             if (card.getRank().equalsIgnoreCase(rank)) {
@@ -51,6 +59,7 @@ public class Deck {
             }
         }
     }
+
     public void findCard(String suit, String rank) {
         for (Card card : deck) {
             if (card.getSuit().equalsIgnoreCase(suit) && card.getRank().equalsIgnoreCase(rank)) {
@@ -61,7 +70,6 @@ public class Deck {
         System.out.println("Card not found!");
     }
 
-    }
     public void dealCard() {
         System.out.println("Dealing 5 random cards:");
         shuffleDeck();
@@ -69,7 +77,4 @@ public class Deck {
             deck.get(i).printCard();
         }
     }
-
-
 }
-
