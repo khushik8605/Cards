@@ -62,6 +62,13 @@ public class Deck {
     }
 
     }
+    public void dealCard() {
+        System.out.println("Dealing 5 random cards:");
+        shuffleDeck();
+        for (int i = 0; i < 5; i++) {
+            deck.get(i).printCard();
+        }
+    }
 
 
 }
