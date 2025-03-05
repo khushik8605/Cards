@@ -25,5 +25,10 @@ public class Deck {
         System.out.println("Total Cards: " + deck.size());
     }
 
+        public void shuffleDeck() {
+        Collections.shuffle(deck);
+    }
+
+
 }
 
