@@ -1,5 +1,4 @@
 
-
 // Main.java
 import java.util.*;
 
@@ -52,6 +51,9 @@ public class Main {
                     System.out.print("Enter rank: ");
                     String rankName = scanner.nextLine();
                     deck.compareCard(rankName);
+                    break;
+                case 7:
+                    deck.dealCard();
                     break;
                 case 8:
                     System.out.println("Exiting program...");
